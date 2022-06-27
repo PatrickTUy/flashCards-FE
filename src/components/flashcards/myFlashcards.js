@@ -301,7 +301,7 @@ const MyFlashcards = () => {
         </div>
       </div>
       <Grid
-        style={{ marginLeft: 245, marginTop: '5px', width: '80%' }}
+        style={{ marginLeft: 245, marginTop: '5px', width: '80%',marginBottom:'15px' }}
         container
         spacing={{ xs: 2, md: 3 }}
         columns={{ xs: 4, sm: 8, md: 12 }}
