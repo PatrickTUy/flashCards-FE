@@ -384,24 +384,16 @@ const MyFlashcards = () => {
                     </div>
 
                     <div>
-                      <Typography>
-                        {flashcard.isDone === 'true' ? (
-                          <div
-                            style={{ display: 'flex', alignItems: 'center' }}
-                          >
-                            <DoneAllIcon /> <SentimentSatisfiedAltIcon />
-                          </div>
-                        ) : (
-                          <div
-                            style={{ display: 'flex', alignItems: 'center' }}
-                          >
-                            <AssignmentIcon />{' '}
-                            <div style={{ marginLeft: '10px' }}>
-                              IN PROGRESS
-                            </div>
-                          </div>
-                        )}
-                      </Typography>
+                      {flashcard.isDone === 'true' ? (
+                        <div style={{ display: 'flex', alignItems: 'center' }}>
+                          <DoneAllIcon /> <SentimentSatisfiedAltIcon />
+                        </div>
+                      ) : (
+                        <div style={{ display: 'flex', alignItems: 'center' }}>
+                          <AssignmentIcon />{' '}
+                          <div style={{ marginLeft: '10px' }}>IN PROGRESS</div>
+                        </div>
+                      )}
                     </div>
                   </div>
 
