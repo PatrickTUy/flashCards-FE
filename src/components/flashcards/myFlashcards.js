@@ -16,7 +16,7 @@ import MenuItem from '@mui/material/MenuItem';
 import {
   default as CreateModal,
   default as EditModal,
-  default as Modal,
+  default as Modal
 } from '@mui/material/Modal';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
@@ -26,7 +26,7 @@ import {
   ownFlashcards,
   setFlashcardDescription,
   setFlashcardIsDone,
-  setFlashcardUrl,
+  setFlashcardUrl
 } from '../../redux/actions/flashcardAction';
 import Layout from './Layout';
 

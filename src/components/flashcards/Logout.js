@@ -1,11 +1,11 @@
-import React from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import { makeStyles } from '@mui/styles';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Logout = () => {
   const navigate = useNavigate();

@@ -1,25 +1,19 @@
-import React from 'react';
-import { makeStyles } from '@mui/styles';
+import { gql } from '@apollo/client';
+import ExploreIcon from '@mui/icons-material/Explore';
+import LogoutIcon from '@mui/icons-material/Logout';
+import SubjectOutlinedIcon from '@mui/icons-material/SubjectOutlined';
+import AppBar from '@mui/material/AppBar';
+import Avatar from '@mui/material/Avatar';
 import Drawer from '@mui/material/Drawer';
-import Typography from '@mui/material/Typography';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import SubjectOutlinedIcon from '@mui/icons-material/SubjectOutlined';
-import ExploreIcon from '@mui/icons-material/Explore';
-import LogoutIcon from '@mui/icons-material/Logout';
-import Grid from '@mui/material/Grid';
-import { useNavigate, useLocation } from 'react-router-dom';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import { makeStyles } from '@mui/styles';
 import { format } from 'date-fns';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import { useQuery, gql,useMutation } from '@apollo/client';
-import DoneAllIcon from '@mui/icons-material/DoneAll';
-import DeleteIcon from '@mui/icons-material/Delete';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 
 const drawerWidth = 240;

@@ -1,14 +1,14 @@
+import { ApolloClient, ApolloProvider, createHttpLink, InMemoryCache } from '@apollo/client';
+import { setContext } from '@apollo/client/link/context';
+import { ThemeProvider } from '@emotion/react';
+import { createTheme } from '@mui/material/styles';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
-import { ThemeProvider } from '@emotion/react';
-import './index.css';
 import App from './App';
+import './index.css';
+import store from './redux/store';
 import reportWebVitals from './reportWebVitals';
-import { createTheme } from '@mui/material/styles';
-import { ApolloProvider, ApolloClient, InMemoryCache,createHttpLink, } from '@apollo/client';
-import { setContext } from '@apollo/client/link/context';
-import store from './redux/store'
 
 
 const theme = createTheme({

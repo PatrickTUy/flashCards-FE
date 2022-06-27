@@ -1,9 +1,7 @@
-import axios from 'axios';
-import React,{useState} from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import Routes from './routes/Routes';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Routes from './routes/Routes';
 
 function App() {
   return (

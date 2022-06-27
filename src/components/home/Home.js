@@ -1,9 +1,8 @@
-import React from 'react';
-import Typography from '@mui/material/Typography';
-import 'animate.css';
-import Container from '@mui/material/Container'
-import { makeStyles } from '@mui/styles';
 import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
+import { makeStyles } from '@mui/styles';
+import 'animate.css';
 import background from '../../Assets/Images/flashcardBG.jpg';
 
 

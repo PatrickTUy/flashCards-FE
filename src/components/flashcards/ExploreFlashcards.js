@@ -1,30 +1,12 @@
-import React,{ useEffect } from 'react';
-import { makeStyles } from '@mui/styles';
-import Drawer from '@mui/material/Drawer';
-import Typography from '@mui/material/Typography';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import SubjectOutlinedIcon from '@mui/icons-material/SubjectOutlined';
-import ExploreIcon from '@mui/icons-material/Explore';
-import LogoutIcon from '@mui/icons-material/Logout';
-import Grid from '@mui/material/Grid';
-import { useNavigate, useLocation } from 'react-router-dom';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import { format } from 'date-fns';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import { useQuery, gql,useMutation } from '@apollo/client';
-import { useLazyQuery } from '@apollo/client';
+import { gql, useLazyQuery } from '@apollo/client';
+import AssignmentIcon from '@mui/icons-material/Assignment';
 import DoneAllIcon from '@mui/icons-material/DoneAll';
-import DeleteIcon from '@mui/icons-material/Delete';
-import Layout from './Layout';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { explore } from '../../redux/actions/flashcardAction';
-import AssignmentIcon from '@mui/icons-material/Assignment';
+import Layout from './Layout';
 
 
 

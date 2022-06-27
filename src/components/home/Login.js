@@ -1,22 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import {
-  Button,
-  Container,
-  FormControl,
-  Paper,
-  Typography,
-  Snackbar,
-} from '@mui/material';
-import { useNavigate, useLocation } from 'react-router-dom';
-import Box from '@mui/material/Box';
-import { makeStyles } from '@mui/styles';
-import { TextValidator, ValidatorForm } from 'react-material-ui-form-validator';
-import InputAdornment from '@mui/material/InputAdornment';
+import { gql, useMutation } from '@apollo/client';
 import EmailIcon from '@mui/icons-material/Email';
 import LockIcon from '@mui/icons-material/Lock';
 import LoadingButton from '@mui/lab/LoadingButton';
-import Link from '@mui/material/Link'
-import { useQuery, gql,useMutation } from '@apollo/client';
+import {
+  Container,
+  FormControl, Typography
+} from '@mui/material';
+import Box from '@mui/material/Box';
+import InputAdornment from '@mui/material/InputAdornment';
+import Link from '@mui/material/Link';
+import { makeStyles } from '@mui/styles';
+import { useState } from 'react';
+import { TextValidator, ValidatorForm } from 'react-material-ui-form-validator';
+import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 import background from '../../Assets/Images/loginBG.jpg';

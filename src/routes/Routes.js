@@ -1,12 +1,10 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
+import Explore from '../components/flashcards/ExploreFlashcards';
+import Logout from '../components/flashcards/Logout';
+import MyFlashcards from '../components/flashcards/myFlashcards';
 import Home from '../components/home/Home';
-import Login from '../components/home/Login'
-import Signup from '../components/home/SignUp'
-import Layout from '../components/flashcards/Layout'
-import Logout from '../components/flashcards/Logout'
-import MyFlashcards from '../components/flashcards/myFlashcards'
-import Explore from '../components/flashcards/ExploreFlashcards'
+import Login from '../components/home/Login';
+import Signup from '../components/home/SignUp';
 import ProtectRoute from './protectedRoutes';
 
 const AllRoutes = () =>(
