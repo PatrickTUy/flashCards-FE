@@ -22,6 +22,7 @@ import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { toast } from 'react-toastify';
 import {
   ownFlashcards,
   setFlashcardDescription,
@@ -168,13 +169,10 @@ const MyFlashcards = () => {
       onCompleted: (data) => {
         console.log(data, 'getMyFlashCards');
         data && dispatch(ownFlashcards(data.myFeed));
-        // localStorage.setItem('userToken', login.token);
-        // localStorage.setItem('userName',login.user.name)
-        // localStorage.setItem('userId',login.user.id)
-        // navigate('/dashboard/flashcards');
+       
       },
       onError: (error) => {
-        console.log(error, 'my error');
+        console.log(error, 'error');
       },
     });
   }, [editCard, deleteCard, createCard]);
@@ -183,25 +181,15 @@ const MyFlashcards = () => {
 
   React.useEffect(() => {
     if (flashCards.myFlashcards.length > 0 && editId) {
-      console.log(flashCards.myFlashcards.id, 'yooooooooooo');
-
       const fetchFlashcard = flashCards.myFlashcards.filter(
         (flashcard) => flashcard.id === editId
       );
       dispatch(setFlashcardDescription(fetchFlashcard[0].description));
-
       dispatch(setFlashcardUrl(fetchFlashcard[0].url));
-
       dispatch(setFlashcardIsDone(fetchFlashcard[0].isDone));
-      // dispatch(cardToEdit({description:fetchFlashcard[0].description,isDone:fetchFlashcard[0].isDone,url:fetchFlashcard[0].url}))
-      console.log(fetchFlashcard[0], 'jijii');
     }
   }, [editId]);
 
-  //  setEditFlashcard({description:fetchFlashcard.description,
-  //   isDone:fetchFlashcard.isDone})
-
-  console.log(flashCards.myFlashcards, 'myflashcards here render');
 
   const handleCloseModal = () => {
     setShowModal(false);
@@ -217,6 +205,10 @@ const MyFlashcards = () => {
     },
     onCompleted: () => {
       setDeleteCard((state) => !state);
+      toast.success('successfully deleted flashcard', {
+        position: "top-center",
+        autoClose:2000,
+      })
     },
   });
 
@@ -227,6 +219,10 @@ const MyFlashcards = () => {
     },
     onCompleted: () => {
       setCreateCard((state) => !state);
+      toast.success('successfully created flashcard', {
+        position: "top-center",
+        autoClose:2000,
+      })
     },
   });
 
@@ -239,8 +235,11 @@ const MyFlashcards = () => {
     },
     onCompleted: () => {
       setEditCard((state) => !state);
-      // navigate('/dashboard/flashcards');
-      // window.location.reload();
+      toast.success('successfully edited flashcard', {
+        position: "top-center",
+        autoClose:2000,
+      })
+     
     },
     onError: (err) => {
       console.log(
@@ -249,7 +248,6 @@ const MyFlashcards = () => {
         editedFlashcard.url,
         editedFlashcard.isDone
       );
-      console.log(err, 'my beautiful error');
     },
   });
 
@@ -272,19 +270,7 @@ const MyFlashcards = () => {
     setShowCreateModal(false);
   };
 
-  // const [delete] = useMutation(DELETE_MUTATION, {
-  //   variables: {
-  //     id:
-  //   },
-  //   onCompleted: ({ signup }) => {
-  //     localStorage.setItem('userToken', signup.token);
-  //     navigate('/dashboard/flashcards');
-  //   }
-  // });
 
-  // deleteFlashcard
-
-  console.log(flashcardId, 'id to be deleted');
   return (
     <div>
       <Layout />

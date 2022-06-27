@@ -102,20 +102,7 @@ const Layout = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const name = localStorage.getItem('userName');
-  console.log(name,'name')
 
-
-  // React.useEffect(()=>{
-  //   login()
-  // },[])
- 
-  // login()
-
-  
-
-  const flashcards = [
-    1,2,3,4
-  ]
   
   const menuItems = [
     {

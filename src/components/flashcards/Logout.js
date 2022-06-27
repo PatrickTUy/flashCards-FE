@@ -17,14 +17,11 @@ const Logout = () => {
 
   const handleLogout = () => {
     localStorage.removeItem('userToken');
-    // navigate('/', { replace: true });
     window.location.pathname = '/';
   };
 
   const handleCloseModel = () => {
     setOpen(false);
-    console.log('supposed to work');
-    // navigate('/dashboard/flashcards', { replace: true });
     window.location.pathname = '/dashboard/flashcards';
   };
 

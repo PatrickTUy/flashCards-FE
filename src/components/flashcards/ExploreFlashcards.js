@@ -27,7 +27,6 @@ query Feed {
 
 const ExploreFlashcards = ()=>{
   const userId = JSON.parse(localStorage.getItem('userId'))
- console.log(userId,'localstorage')
 
   const [getFlashCards,{ data }] = useLazyQuery(FEED_QUERY, {
     
@@ -38,8 +37,6 @@ const ExploreFlashcards = ()=>{
   React.useEffect(()=>{getFlashCards( {
     fetchPolicy: 'network-only',
     onCompleted: ( data ) => {
-    console.log(data,'getFlashCards')
-    console.log(data.feed[0].addedBy.id,'id')
     const filtered = data.feed.filter( (flashcards)=> flashcards.addedBy.id !== userId   ) 
   
      data && dispatch(
@@ -47,19 +44,10 @@ const ExploreFlashcards = ()=>{
       filtered
     )
   )
-    // localStorage.setItem('userToken', login.token);
-    // localStorage.setItem('userName',login.user.name)
-    // localStorage.setItem('userId',login.user.id)
-    // navigate('/dashboard/flashcards');
   },onError:(error)=>{
     console.log(error,'my error')
   }})},[])
 
-  // data && console.log(data,'omoge for real')
-
- 
-
-  
   const flashCards = useSelector((state) => state.flashcards);
 
   console.log(flashCards.explore,'myflashcards here render')

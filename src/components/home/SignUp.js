@@ -70,7 +70,6 @@ const Signup = () => {
       password: password,
     },
     onCompleted: ({ signup }) => {
-      console.log(signup.user);
       setIsLoading(false);
       toast.success('successfully signed up!', {
         position: 'top-center',
