@@ -495,7 +495,7 @@ const MyFlashcards = () => {
                 setDescription(e.target.value);
               }}
             />
-            <Typography style={{ margin: '20px' }}>
+            <Typography style={{ margin: '20px 60px' }}>
               {' '}
               Down below select an image that matches your description{' '}
             </Typography>
