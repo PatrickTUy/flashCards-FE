@@ -195,6 +195,7 @@ const Login = ()=>{
                 margin:'0 auto'
               }}>
               <LoadingButton
+                  disabled= {email && password? false:true}
                   variant="contained"
                   type="submit"
                   sx={{ color: 'white' }}

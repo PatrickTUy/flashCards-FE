@@ -49,6 +49,9 @@ const Signup = () => {
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
+ 
+  
+
   const onChangeNames = (e) => {
     const names = e.target.value;
     setNames(names);
@@ -85,12 +88,14 @@ const Signup = () => {
     onError: (error) => {
       console.log(error);
       setIsLoading(false);
-      toast.success(error.message, {
+      toast.error(error.message, {
         position: 'top-center',
         autoClose: 2000,
       });
     },
   });
+
+ 
 
   return (
     <div className={classes.home} style={{ display: 'flex' }}>
@@ -230,6 +235,7 @@ const Signup = () => {
               }}
             >
               <LoadingButton
+                disabled= {names && password? false:true}
                 variant="contained"
                 type="submit"
                 sx={{ color: 'white' }}
